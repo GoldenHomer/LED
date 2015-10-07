@@ -13,13 +13,8 @@ namespace MFConsoleApplication1
 			OutputPort LED;
 			LED = new OutputPort((Cpu.Pin)FEZ_Pin.Digital.LED, true);
 			
-			// Blink	
-			while (true) 
-			{
-				LED.Write(!LED.Read());
-				
-				Thread.Sleep(200);
-			}
+			// led
+			Thread.Sleep(Timeout.Infinite);
 		}
 	}
 }
