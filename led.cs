@@ -16,8 +16,10 @@ namespace MFConsoleApplication1
 			// Blink	
 			while (true) 
 			{
-				LED.Write(!LED.Read());
+				LED.Write(true);
+				Thread.Sleep(200);
 				
+				LED.Write(false);
 				Thread.Sleep(200);
 			}
 		}
