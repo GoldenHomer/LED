@@ -19,11 +19,8 @@ namespace MFConsoleApplication1
 			
 			while (true) 
 			{
-				LED.Write(true);
-				Thread.Sleep(200);
-				
-				LED.Write(false);
-				Thread.Sleep(200);
+				LED.Write(Button.Read());
+				Thread.Sleep(10);
 			}
 		}
 	}
