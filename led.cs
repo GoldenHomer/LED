@@ -19,7 +19,7 @@ namespace MFConsoleApplication1
 			
 			while (true) 
 			{
-				LED.Write(Button.Read());
+				LED.Write(!Button.Read());
 				Thread.Sleep(10);
 			}
 		}
