@@ -11,9 +11,12 @@ namespace MFConsoleApplication1
 		public static void Main()
 		{
 			OutputPort LED;
-			LED = new OutputPort((Cpu.Pin)FEZ_Pin.Digital.LED, true);
+			InputPort Button;
 			
-			// Blink	
+			//Read the status of the button and pass state to LED. LED turns off when button is pressed.
+			LED = new OutputPort((Cpu.Pin)FEZ_Pin.Digital.LED, true);
+			Button = new InputPort((Cpu.Pin)FEZ_Pin.Digital.LDR, false, Port.ResistorMode.PullUp);
+			
 			while (true) 
 			{
 				LED.Write(true);
